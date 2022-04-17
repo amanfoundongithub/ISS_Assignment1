@@ -1,9 +1,10 @@
 #!/bin/bash
+touch temp.txt
+grep -wo '[[:alnum:]]\+' $1  | sort | uniq -d > temp.txt
 
-sort $1 | uniq -c | sort -nr | while read count name
+cat temp.txt | while read line 
 do
-        if [ ${count} -gt 1 ]
-        then
-                echo "${name} ${count}"
-        fi
+   echo -n "$line:"
+   grep -o "$line" $1 | wc -l   
+   # do something with $line here
 done
