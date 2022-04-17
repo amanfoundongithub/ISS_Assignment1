@@ -1,5 +1,5 @@
 #!/bin/bash
-inp="quotes.txt"
+inp=$1
 while IFS= read -r line
 do
   author=`cut -d "~" -f2- <<< "$line"`
