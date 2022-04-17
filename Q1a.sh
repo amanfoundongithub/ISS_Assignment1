@@ -1,2 +1,3 @@
 #!/bin/bash
-sed -i '/^ *$/d' quotes.txt
+sed -i '/^ *$/d' $1
+
