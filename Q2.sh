@@ -1,5 +1,6 @@
 #!/bin/bash
 inp=$1
+touch speech.txt
 while IFS= read -r line
 do
   author=`cut -d "~" -f2- <<< "$line"`
