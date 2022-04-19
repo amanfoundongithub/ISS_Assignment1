@@ -1,8 +1,9 @@
 #!/bin/bash
 
 #First-part
-sed '/^$/d' quotes.txt
+touch temp.txt
+sed '/^$/d' temp.txt
 
 #second-part
-awk '!visited[$0]++' quotes.txt 
+awk '!visited[$0]++' temp.txt 
 
