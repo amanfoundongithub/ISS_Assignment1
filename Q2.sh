@@ -1,5 +1,5 @@
 #!/bin/bash
-inp=$1
+inp="quotes.txt"
 touch speech.txt
 while IFS= read -r line
 do
