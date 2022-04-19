@@ -7,7 +7,7 @@ kp=1         # disable globbing
 for i in $(cat < "$1"); do
   lin=$i
   echo $i > temp.txt
-  echo -n "$kp-"
+  echo -n "Line No: $kp Count Of Words: "
   kp=$((kp+1))
   wc -w < temp.txt
 done
